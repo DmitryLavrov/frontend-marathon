@@ -1,6 +1,8 @@
 #Marathon from Vladilen Minin
 
-# Day 1 14.06.2021
+# Day 1 
+14.06.2021  
+https://vladilen.ru/marathon/cards  
 Instead of VSCode plugin "Live server" I use [browser-sync](https://browsersync.io/)
 ```shell
 # install
