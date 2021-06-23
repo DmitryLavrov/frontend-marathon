@@ -6,24 +6,25 @@ const colors = [
 
 const SQUARES_NUMBER = 1312
 
-for (let i=0; i< SQUARES_NUMBER; i++) {
+for (let i = 0; i < SQUARES_NUMBER; i++) {
   const square = document.createElement('div')
   square.classList.add('square')
   board.append(square)
 
   square.addEventListener('mouseover', () => setColor(square))
 
-  square.addEventListener('mouseleave', () => offColor(square))
+  square.addEventListener('mouseleave', offColor)
 
 }
 
 const setColor = (item) => {
-  const colorNumber = Math.floor(Math.random()*colors.length)
+  const colorNumber = Math.floor(Math.random() * colors.length)
   item.style.background = colors[colorNumber]
   item.style.boxShadow = `0 0 4px #FFF, 0 0 8px #FFF, 0 0 16px #FFF`
 }
 
-const offColor = (item) => {
+const offColor = (event) => {
+  const item = event.target
   item.style.background = '#222'
   item.style.boxShadow = `0 0 2px #000`
 }
